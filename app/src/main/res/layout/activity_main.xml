@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#293030"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <!--============================== NAMA APLIKASI ==============================-->
+    
+    <TextView
+        android:id="@+id/nama_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/potta_one"
+        android:gravity="center_horizontal"
+        android:text="RailVista"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:paddingBottom="40dp"
+        android:textSize="30sp" />
+    
+    <!--============================== SPINNER ==============================-->  
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:outlineAmbientShadowColor="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient"
+                android:fontFamily="@font/potta_one"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Kategori Tiket"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!--============================== TANGGAL ==============================-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        android:outlineAmbientShadowColor="@color/black">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:fontFamily="@font/potta_one"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Pilih Tanggal"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <DatePicker
+            android:id="@+id/date_pick"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:datePickerMode="spinner"
+            android:layout_marginTop="20dp"
+            android:calendarViewShown="false"/>
+    </androidx.cardview.widget.CardView>
+
+    <!--============================== JAM ==============================-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        android:outlineAmbientShadowColor="@color/black">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Waktu"
+            android:textColor="@color/black"
+            android:fontFamily="@font/potta_one"
+            android:textSize="18sp"
+            android:background="@drawable/gradient"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"/>
+
+        <TimePicker
+            android:id="@+id/time_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:timePickerMode="spinner" />
+    </androidx.cardview.widget.CardView>
+
+    <!--============================== BUTTON ==============================-->
+
+    <Button
+        android:id="@+id/btn_pesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btnbackground"
+        android:fontFamily="@font/potta_one"
+        android:text="Pesan"
+        android:textColor="@color/black"
+        android:textSize="22sp"/>
+
+</LinearLayout>
